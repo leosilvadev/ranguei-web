@@ -7,25 +7,15 @@
 		<link rel="stylesheet" href="/css/index.css">
 		<!-- endbuild -->
 	</head>
-	<body data-ng-controller="LoginController">
+	<body>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 col-lg-offset-2">
 					<div class="page-header">
 						<h1>Onde você já rangou?</h1>
 					</div>
-					
-					<button type="button" class="btn btn-primary btn-large"
-						data-ng-show="!logged"
-						data-ng-click="IntentLogin()">
-						Login with Facebook
-					</button>
-					
-					<button type="button" class="btn btn-danger btn-large"
-						data-ng-show="logged"
-						data-ng-click="logout()">
-						Logout
-					</button>
+
+					<facebook-manager></facebook-manager>
 					
 					<div>
 						<debug val="user"></debug>
@@ -39,16 +29,20 @@
 		<script src="/components/jquery/dist/jquery.js"></script>
 		<script src="/components/angular/angular.js"></script>
 		<script src="/components/angular-facebook/lib/angular-facebook.js"></script>
+		<script src="/components/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script src="/components/angular-cookies/angular-cookies.min.js"></script>
 		
-		<script src="/js/rangueiModule.js"></script>
+		<script src="/modules/ranguei.js"></script>
 		
-		<script src="/js/modules/facebook/facebookModule.js"></script>
-		<script src="/js/modules/facebook/controllers/controllers.js"></script>
-		<script src="/js/modules/facebook/services/services.js"></script>
+		<script src="/modules/facebook/facebookModule.js"></script>
+		<script src="/modules/facebook/controllers/controllers.js"></script>
+		<script src="/modules/facebook/directives/facebookLogin.js"></script>
+		<script src="/modules/facebook/services/services.js"></script>
+		<script src="/modules/facebook/services/userAccess.js"></script>
 		
-		<script src="/js/modules/guest/guestModule.js"></script>
-		<script src="/js/modules/guest/controllers/controllers.js"></script>
-		<script src="/js/modules/guest/services/services.js"></script>
+		<script src="/modules/guest/guestModule.js"></script>
+		<script src="/modules/guest/controllers/controllers.js"></script>
+		<script src="/modules/guest/services/services.js"></script>
 		<!-- endbuild -->
 	</body>
 </html>
