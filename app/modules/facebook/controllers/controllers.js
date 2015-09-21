@@ -5,7 +5,7 @@
 	angular.module('ranguei.facebook.controllers', ['facebook', 'ranguei.facebook.services']);
 	
 	angular.module('ranguei.facebook.controllers').config(['FacebookProvider',function(FacebookProvider) {
-		FacebookProvider.init('--------------');
+		FacebookProvider.init('---------');
 	}]);
 	
 	angular.module('ranguei.facebook.controllers')
